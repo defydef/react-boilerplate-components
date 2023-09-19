@@ -14,21 +14,22 @@ function App() {
 
   const [activeImageId, setActiveImageId] = useState(0);
 
-  console.log(activeImageId);
+  function handleInc() {
+    if (activeImageId < images.length - 1)
+      setActiveImageId((prevId) => prevId + 1);
+  }
+
+  function handleDec() {
+    if (activeImageId > 0) setActiveImageId((prevId) => prevId - 1);
+  }
 
   return (
     <div className="app">
-      <Button
-        type="primary"
-        onClick={() => setActiveImageId((prevId) => prevId - 1)}
-      >
+      <Button type="primary" onClick={handleDec}>
         &#8592;
       </Button>
       <img src={images.at(activeImageId)} />
-      <Button
-        type="primary"
-        onClick={() => setActiveImageId((prevId) => prevId + 1)}
-      >
+      <Button type="primary" onClick={handleInc}>
         &#8594;
       </Button>
     </div>
