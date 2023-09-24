@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Button from "../components/Button";
+import styles from "./ImageCarousell.module.css";
+import image1 from "/images/image-1.jpeg";
+import image2 from "/images/image-2.jpeg";
+import image3 from "/images/image-3.jpeg";
+import image4 from "/images/image-4.jpeg";
+import image5 from "/images/image-5.jpeg";
 
-const images = [
-  "https://images.pexels.com/photos/1151282/pexels-photo-1151282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/1078981/pexels-photo-1078981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-];
+const images = [image1, image2, image3, image4, image5];
 
 function ImageCarousell() {
   const [activeImageId, setActiveImageId] = useState(0);
@@ -21,15 +21,19 @@ function ImageCarousell() {
     if (activeImageId > 0) setActiveImageId((prevId) => prevId - 1);
   }
   return (
-    <>
-      <Button type="primary" onClick={handleDec}>
-        &#8592;
-      </Button>
-      <img src={images.at(activeImageId)} />
-      <Button type="primary" onClick={handleInc}>
-        &#8594;
-      </Button>
-    </>
+    <div className={styles.imageCarousell}>
+      <h1>Image Carousell</h1>
+
+      <div className={styles.imageContainer}>
+        <Button type="primary" onClick={handleDec}>
+          &#8592;
+        </Button>
+        <img src={images.at(activeImageId)} />
+        <Button type="primary" onClick={handleInc}>
+          &#8594;
+        </Button>
+      </div>
+    </div>
   );
 }
 

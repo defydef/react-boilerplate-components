@@ -1,0 +1,18 @@
+.imageCarousell {
+  width: 100vw;
+}
+
+.imageCarousell h1 {
+  margin: 1rem;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.imageContainer img {
+  width: 28vw;
+}

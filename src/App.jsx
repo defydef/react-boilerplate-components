@@ -1,6 +1,5 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
-import "./App.css";
 import ImageCarousell from "./pages/ImageCarousell";
 import HomePage from "./pages/HomePage";
 
@@ -12,9 +11,6 @@ function App() {
         <Route path="image-carousell" element={<ImageCarousell />} />
       </Routes>
     </BrowserRouter>
-    // <div className="app">
-    //   <ImageCarousell />
-    // </div>
   );
 }
 
