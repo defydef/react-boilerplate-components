@@ -34,7 +34,7 @@ body {
 
   min-height: 100vh;
   display: grid;
-  place-content: center;
+  /* place-content: center; */
   /* place element in the center horizontally 
     and vertically */
 }
@@ -54,24 +54,6 @@ textarea {
   border-radius: 5px;
   background-color: var(--color-light--3);
   transition: all 0.2s;
-}
-
-input:focus {
-  outline: none;
-  background-color: #fff;
-}
-
-.cta:link,
-.cta:visited {
-  display: inline-block;
-  background-color: var(--color-brand--2);
-  color: var(--color-dark--1);
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 600;
-  padding: 1rem 3rem;
-  border-radius: 5px;
 }
 
 /*
